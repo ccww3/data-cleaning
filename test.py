@@ -15,7 +15,6 @@ print (df)
 import re
 regex = re.compile('. ')
 l = df.lname1.tolist()
-print (l)
 matches = [string for string in l if re.match(regex,string)]
 # print (matches)
 df.mname1[df.lname1.isin(matches)]=[string.split()[0] for string in l if re.match(regex,string)]
